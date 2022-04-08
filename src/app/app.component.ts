@@ -1,3 +1,5 @@
+import { LoginPage } from './../pages/login/login';
+import { CadastroPage } from './../pages/cadastro/cadastro';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -5,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { TestPage } from '../pages/test/test';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,8 +24,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Lista de Usuarios', component: HomePage },
+      { title: 'List', component: ListPage },
+      { title: 'Cadastro', component: CadastroPage },
+      { title: 'Login', component: LoginPage }
     ];
 
   }

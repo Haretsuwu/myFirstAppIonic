@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="user.username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Telefone</ion-label>
+      <ion-input type="text" [(ngModel)]="user.telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Site</ion-label>
+      <ion-input type="text" [(ngModel)]="user.website"></ion-input>
+    </ion-item>
+
+    <p>
+      <button color="danger" ion-button full (click)="getPhoto()">
+        <ion-icon name="camera"></ion-icon>
+        Tirar Foto Cliente
+      </button>
+      <img src="{{user.img}}" alt="" *ngIf="user.img" width="100%" height="150px">
+    </p>
+
+    <button ion-button full (click)="saveUser(user)" >Cadastrar</button>
+
+  </ion-list>
+
+</ion-content>

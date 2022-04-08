@@ -1,0 +1,2 @@
+Async await
+chamadas http (axios, fetch, curl, insomnia)

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Usuário</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      {{ user.name }}
+    </ion-card-header>
+    <ion-card-content>
+      Usuario: {{ user.username }} <br>Endereço: <span *ngIf="user.address"> {{ user.address.city }} </span> <br>Telefone:  {{ user.phone }} <br>Website: {{ user.website }}
+    </ion-card-content>
+    <!-- <div>
+      <span> {{ user.name }} </span> <br>
+      <span *ngIf="user.address"> {{ user.address.city }} <br> {{ user.address.street }} </span> <br>
+      <span> {{ user.website }} </span> <br>
+      <span> {{ user.phone }} </span> <br>
+    </div> -->
+  </ion-card>
+</ion-content>
